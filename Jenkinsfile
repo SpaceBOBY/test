@@ -15,7 +15,7 @@ pipeline {
 
     stage('run') {
       steps {
-        sh 'docker run -t weather -p 8081:81 '
+        sh 'docker run -t weather -dp 5000:80 '
       }
     }
 
