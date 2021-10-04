@@ -33,7 +33,7 @@ namespace Weather
 
             Console.WriteLine(environmentName);
             Console.WriteLine(Environment.GetEnvironmentVariable("DOTNET_RUNNING_IN_CONTAINER"));
-            if (bool.TryParse(System.Environment.GetEnvironmentVariable("DOTNET_RUNNING_IN_CONTAINER"), out _))
+            if (System.Environment.GetEnvironmentVariable("DOTNET_RUNNING_IN_CONTAINER") == "true")
             {
                 Console.WriteLine("Gay shit");
             }
