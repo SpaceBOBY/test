@@ -32,6 +32,11 @@ namespace Weather
             var environmentName = Environment.GetEnvironmentVariable("MODE");
 
             Console.WriteLine(environmentName);
+            Console.WriteLine(Environment.GetEnvironmentVariable("DOTNET_RUNNING_IN_CONTAINER"));
+            if (bool.TryParse(System.Environment.GetEnvironmentVariable("DOTNET_RUNNING_IN_CONTAINER"), out _))
+            {
+                Console.WriteLine("Gay shit");
+            }
 
             if (env.IsDevelopment())
             {
